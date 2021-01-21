@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
     lat1.textContent = '';
     long1.textContent = '';
     msg.textContent='';
-    fetch('https://enigmatic-hamlet-38721.herokuapp.com/weather?address='+search.value).then((res,error)=>{
+    fetch('https://weather-blitz.herokuapp.com/weather?address='+search.value).then((res,error)=>{
     if(error){
         console.log("shray");
     }    
