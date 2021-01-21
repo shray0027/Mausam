@@ -1,0 +1,178 @@
+body{
+    color : #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin : 0 auto;
+    padding : 0 16px;
+    display : flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+}
+p{
+    text-align: center;
+}
+
+footer {
+
+   color:#888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding-top: 16px 0;
+}
+.navbar-collapse {
+    display: flex;
+    /* position: relative; */
+}
+ul{
+    /* position: absolute; */
+    float:right;
+    right:0;
+}
+header {
+    margin-top :16px;
+    margin-bottom : 40px;
+}
+h1{
+    font-size: 50px;
+    margin-bottom :16px;
+    display: inline-block;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    text-align: center;
+}
+.links a {
+    color : #888888;
+    margin-right: 16px;
+    text-decoration : none;
+    transition: 200ms;
+}
+.links a:hover{
+    border-bottom : 2px solid black; 
+}
+.portrait{
+    width : 250px;
+}
+.stick{
+   flex-grow:1; 
+}
+input{
+    border :1px solid #cccccc;
+    border-radius: 5px;
+    padding: 8px;
+    width : 80%;
+    
+}
+li{
+    transition: 200ms;
+}
+li:hover{
+    border-bottom: 2px solid black;
+}
+button {
+    cursor : pointer;
+    background : black;
+    color : white;
+    border : 0;
+    padding :8px;
+    border-radius: 5px;
+}
+.search{
+    width: 18%;
+}
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    display: none;
+   
+  }
+  .error {
+      margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .index{
+    width : 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+.msg{
+    margin-top: 30px;
+    background: #F8F9FA;
+    padding: 16px;
+}
+  .content{
+      background  :#F8F9FA;
+    font-size : 16px;
+    display: none;
+  }
+
+  ul{
+    width : 100%;
+    text-align: right;
+}
+.temp {
+    display: flex;
+    flex-direction: column;
+}
+.img-1{
+    border-radius: 100%;
+    margin: auto;
+}
+footer p{
+    padding-top: 20px;
+}
+@media(min-width:700px){
+    .msg{
+        margin-top: 60px;
+    }
+    .error{
+        margin-top : 50px;
+    }
+    .l p{
+        text-align: left;
+    }
+    #map{
+        margin-top: 50px;
+
+    }
+   
+}
+@media(max-width :700px){
+   .head{
+       margin-bottom : 16px;
+   }
+    h1 {
+        font-size : 20px;
+    }
+    img{
+        width: 50px;
+    }
+    #map{
+        margin-top: 20px;
+    }
+   .index{
+        width : 350px;
+   }
+    form {
+        text-align: center;
+    }
+    .search{
+        margin-top: 20px;
+        width: 80%;
+    }
+    .center{
+        font-size :  16px;
+        text-align: center;
+        margin-top:20px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}

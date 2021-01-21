@@ -1,0 +1,28 @@
+<%- include("partials/header"); -%>
+ <form>
+   <input placeholder="location" autocomplete="true">
+   <button class="search">Search</button>
+ </form>
+ <div class="error">
+  <img class="index" src="/img/index.jpg">
+  <p class="msg center">Use this site to search weather !!</p>
+</div>
+ <div class="row content">
+   
+      <div class="col-6 l">
+        <p id="loc"></p>
+        <p id="desc"></p>
+        <p id="coordinates">
+           <span id="lat"></span>
+          <span id="long"></span>
+        </p>
+      </div>
+      <div class="col-6 temp r"> 
+        <p id="temp"></p>
+        <img class="img-1">
+      </div>
+ </div>
+
+ 
+ <div id="map"></div>
+ <%- include("partials/footer"); -%>
