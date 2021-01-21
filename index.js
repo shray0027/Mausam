@@ -61,6 +61,10 @@ app.get("*",(req,res) =>{
        title : "404 page not found"
    })
 } )
-app.listen(3000,()=>{
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+  }
+app.listen(port,()=>{
     console.log("port 3000 is deployed");
 })
