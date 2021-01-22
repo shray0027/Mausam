@@ -13,7 +13,9 @@ const desc=document.querySelector('#desc');
 const map_ =document.getElementById("map");
 const img1 =document.querySelector(".img-1");
 const btn =document.querySelector(".search");
-
+const activate = ()=>{
+    btn.style.color="red";
+}
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     temp.textContent='loding...';
@@ -22,7 +24,7 @@ weatherForm.addEventListener('submit',(e)=>{
     lat1.textContent = '';
     long1.textContent = '';
     msg.textContent='';
-    fetch('http://localhost:3000/weather?address='+search.value).then((res,error)=>{
+    fetch('https://weather-blitz.herokuapp.com/weather?address='+search.value).then((res,error)=>{
     res.json().then((data)=> {
         console.log(data);
             if(data.error){
