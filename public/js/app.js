@@ -12,10 +12,8 @@ const long1=document.querySelector('#long');
 const desc=document.querySelector('#desc');
 const map_ =document.getElementById("map");
 const img1 =document.querySelector(".img-1");
-const btn =document.querySelector(".search");
-const activate = ()=>{
-    btn.style.color="red";
-}
+
+
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     temp.textContent='loding...';
