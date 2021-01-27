@@ -62,13 +62,17 @@ h1{
 }
 .portrait{
     width : 250px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px #777;
 }
+
 .stick{
    flex-grow:1; 
 }
 input{
     border :1px solid #cccccc;
     border-radius: 5px;
+    box-shadow: ;
     padding: 8px;
     width : 80%;
     

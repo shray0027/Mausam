@@ -1,3 +1,4 @@
+
 console.log("hello js");
 const weatherForm = document.querySelector('form');
 const search=document.querySelector('input');
@@ -17,16 +18,16 @@ var lat11=0;
 var lat22=0;
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
-    temp.textContent='loding...';
+    temp.textContent='loading...';
     loc.textContent='';
     desc.textContent='';
     lat1.textContent = '';
     long1.textContent = '';
     msg.textContent='';
+    img1.src='';
 
     fetch('https://weather-blitz.herokuapp.com/weather?address='+search.value).then((res,error)=>{
     res.json().then((data)=> {
-        console.log(data);
             if(data.error){
             errorImg.src='/img/address404.jpg';
             msg.textContent=data.error;
@@ -44,20 +45,20 @@ weatherForm.addEventListener('submit',(e)=>{
                  img1.src = data.weatherIcon;
                  latt11=data.latitude;
                  latt22=data.longitude;
-                 map_.style.display="block";         
+                 map_.style.display="block";      
+                 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hyYXkwMDI3IiwiYSI6ImNrZ3FtOHl5dTJ3YTQyc3RlZzhuNHI4enQifQ.TRewRSW2O-UFK02JXQNPrQ';
+                 var map = new mapboxgl.Map({
+                   container: 'map',
+                   style: 'mapbox://styles/mapbox/streets-v11',
+                   center: [latt22,latt11],
+                   zoom:11,
+                 }
+                 );
+                  var marker =new mapboxgl.Marker()
+                  .setLngLat([latt22,latt11])
+                  .addTo(map);
             }
         });
     });
 });
-console.log(lat11);
-// function initMap() {
-//         const place = { lat:lat11 , lng:lat22};
-//         const map = new google.maps.Map(map_, {
-//         zoom: 4,
-//         center: place,
-//         });
-//         const marker = new google.maps.Marker({
-//         position: place,
-//         map: map,
-//         });
-//     }
+
