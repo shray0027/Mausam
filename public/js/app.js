@@ -13,7 +13,8 @@ const desc=document.querySelector('#desc');
 const map_ =document.getElementById("map");
 const img1 =document.querySelector(".img-1");
 
-
+var lat11=0;
+var lat22=0;
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     temp.textContent='loding...';
@@ -22,6 +23,7 @@ weatherForm.addEventListener('submit',(e)=>{
     lat1.textContent = '';
     long1.textContent = '';
     msg.textContent='';
+
     fetch('https://weather-blitz.herokuapp.com/weather?address='+search.value).then((res,error)=>{
     res.json().then((data)=> {
         console.log(data);
@@ -40,20 +42,22 @@ weatherForm.addEventListener('submit',(e)=>{
                  lat1.textContent = "Lat - "+ data.latitude+" ,";
                  long1.textContent ="Long - " +data.longitude;
                  img1.src = data.weatherIcon;
+                 latt11=data.latitude;
+                 latt22=data.longitude;
                  map_.style.display="block";         
             }
         });
     });
 });
-
-function initMap() {
-        const place = { lat:28.7041 , lng:77.1025};
-        const map = new google.maps.Map(map_, {
-        zoom: 4,
-        center: place,
-        });
-        const marker = new google.maps.Marker({
-        position: place,
-        map: map,
-        });
-    }
+console.log(lat11);
+// function initMap() {
+//         const place = { lat:lat11 , lng:lat22};
+//         const map = new google.maps.Map(map_, {
+//         zoom: 4,
+//         center: place,
+//         });
+//         const marker = new google.maps.Marker({
+//         position: place,
+//         map: map,
+//         });
+//     }

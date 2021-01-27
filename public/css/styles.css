@@ -42,7 +42,7 @@ header {
 h1{
     font-size: 50px;
     margin-bottom :16px;
-    display: inline-block;
+    font-weight: bold;
 }
 .head{
     display: flex;
@@ -73,10 +73,30 @@ input{
     width : 80%;
     
 }
-li{
+i{
+    font-size: 25px;
+}
+.i1{
+    
+    color : #DD4B25;
+}
+.i2{
+    color :#2663E9;
+}
+.i3{
+    color:#EFD819; 
+}
+.i4{
+    color :#97B64D
+}
+.details{
+    list-style-type: none;
+    margin-top: 16px;
+}
+.nav-item{
     transition: 200ms;
 }
-li:hover{
+.nav-item:hover{
     border-bottom: 2px solid black;
 }
 button {
@@ -118,8 +138,14 @@ button {
     font-size : 16px;
     display: none;
   }
-
-  ul{
+.about-content{
+    background: #F8F9FA;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+.navbar-nav{
     width : 100%;
     text-align: right;
 }
@@ -155,7 +181,8 @@ footer p{
        margin-bottom : 16px;
    }
     h1 {
-        font-size : 20px;
+        font-size : 40px;
+        text-align: center;
     }
     img{
         width: 50px;
@@ -169,6 +196,9 @@ footer p{
     form {
         text-align: center;
     }
+    .about-content{
+        margin-top: 25px;
+    }
     .search{
         margin-top: 20px;
         width: 80%;
@@ -177,6 +207,13 @@ footer p{
         font-size :  16px;
         text-align: center;
         margin-top:20px;
+    }
+    .portrait{
+        width: 150px;
+        margin:auto;
+    }
+    .about-content-img {
+        display: flex;
     }
     footer p {
         font-size: 13px;
